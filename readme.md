@@ -1,4 +1,5 @@
 # Golang-Javascript Template and Expression Evaluator
+[![Go Report Card](https://goreportcard.com/badge/github.com/oberonus/gojst)](https://goreportcard.com/report/github.com/oberonus/gojst)
 
 ```go
 import "github.com/oberonus/gojst"
