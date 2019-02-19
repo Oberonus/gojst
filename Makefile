@@ -8,10 +8,10 @@ test:
 	go test ./...
 
 lint:
-	gometalinter.v2 ./... --vendor --exclude="exported.*should have comment.*or be unexported\b"
+	gometalinter ./... --vendor --exclude="exported.*should have comment.*or be unexported\b"
 
 lint-full:
-	gometalinter.v2 ./... --vendor
+	gometalinter ./... --vendor
 
 fmt:
 	gofmt -w=true -s $$(find . -type f -name '*.go' -not -path "./vendor/*")
