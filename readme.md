@@ -1,4 +1,5 @@
 # Golang-Javascript Template and Expression Evaluator
+[![Build Status](https://travis-ci.org/Oberonus/gojst.svg?branch=master)](https://travis-ci.org/Oberonus/gojst)
 [![Go Report Card](https://goreportcard.com/badge/github.com/oberonus/gojst)](https://goreportcard.com/report/github.com/oberonus/gojst)
 
 ```go

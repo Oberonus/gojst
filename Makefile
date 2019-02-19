@@ -5,7 +5,7 @@ SHELL := bash
 all: fmt test lint
 
 test:
-	go test ./...
+	go test -coverprofile=coverage.txt -covermode=atomic ./...
 
 lint:
 	gometalinter ./... --vendor --exclude="exported.*should have comment.*or be unexported\b"
