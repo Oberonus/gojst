@@ -28,6 +28,15 @@ func NewEngine(script io.Reader, data interface{}) (*Engine, error) {
 	return &Engine{&environment{vm: vm, D: data}}, nil
 }
 
+func (e *Engine) SetData(data interface{}) error {
+	err := e.env.vm.Set("data", data)
+	if err != nil {
+		return err
+	}
+	e.env.D = data
+	return nil
+}
+
 func (e *Engine) Check(expr string) (bool, error) {
 	return e.EvalBool(expr)
 }
