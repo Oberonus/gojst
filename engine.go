@@ -29,12 +29,15 @@ func NewEngine(script io.Reader, data interface{}) (*Engine, error) {
 }
 
 func (e *Engine) SetData(data interface{}) error {
-	err := e.env.vm.Set("data", data)
-	if err != nil {
+	if err := e.Set("data", data); err != nil {
 		return err
 	}
 	e.env.D = data
 	return nil
+}
+
+func (e *Engine) Set(variable string, body interface{}) error {
+	return e.env.vm.Set(variable, body)
 }
 
 func (e *Engine) Check(expr string) (bool, error) {
